@@ -91,6 +91,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     app.config['WSSH_ALLOW_SSH_AGENT'] = args.allow_agent
+    app.config['APPLICATION_ROOT'] = os.environ.get("WSSH_APPLICATION_ROOT")
 
     agent = 'wsshd/{0}'.format(wssh.__version__)
 
